@@ -1,0 +1,17 @@
+Package: Rsrcfull
+Type: Package
+Title: Personal Shorthand Utilities for Data Science and Graphics
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Himanshu", "Sharma",
+      email = "hmsphd2021@gmail.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: A compilation of custom wrapper utilities designed to streamline 
+    exploratory data analysis and plot layout workflows.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Config/roxygen2/version: 8.0.0
