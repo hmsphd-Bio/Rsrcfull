@@ -76,3 +76,16 @@ multiplots <- function(rows,columns) {
   cat("Plots layout changed!.You can now plot",rows*columns,"plots in a single window.")
 }
 ###------------------------------------------------------------------------------
+
+#' Calculates the cube root of the desired number or a vector of numbers.
+#'
+#'@returns Cube root of the given number, rounded to two decimal places.
+#'@param x A numeric or a vector of numeric integers or floats.
+#'@export
+cqbrt <- function(x) {
+  if (!is.numeric(x)) {
+    stop("Input must be a single number or a Vector of numbers.")
+  }
+  cube_root <- round(x^(1/3),2)
+  return(cube_root)
+}
