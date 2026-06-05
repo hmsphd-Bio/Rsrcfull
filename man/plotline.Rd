@@ -12,7 +12,8 @@ plotline(
   ylim = NULL,
   ylab = NULL,
   xlab = NULL,
-  h_line_at = NULL
+  h_line_at = NULL,
+  v_line_at = NULL
 )
 }
 \arguments{
