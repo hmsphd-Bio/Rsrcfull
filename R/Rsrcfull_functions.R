@@ -99,7 +99,7 @@ cqbrt <- function(x) {
 #' @param ylm Limits of the Y-axis
 #' @param ylab Label of the Y-axis
 #' @param xlab Label of the X-axis
-#' @param line_at_zero Draws a horizontal dotted line at the zero
+#' @param h_line_at Draws a horizontal dotted line at the specified point on y-axis
 #' @export
 plotline <- function(x,title = NULL,color="red",xlim=NULL,ylim=NULL,ylab =NULL,xlab =NULL, h_line_at = NULL) {
   if (is.vector(x) && is.numeric(x)){

@@ -6,13 +6,13 @@
 \usage{
 plotline(
   x,
-  title,
+  title = NULL,
   color = "red",
   xlim = NULL,
   ylim = NULL,
   ylab = NULL,
   xlab = NULL,
-  line_at_zero = FALSE
+  h_line_at = NULL
 )
 }
 \arguments{
@@ -26,7 +26,7 @@ plotline(
 
 \item{xlab}{Label of the X-axis}
 
-\item{line_at_zero}{Draws a horizontal dotted line at the zero}
+\item{h_line_at}{Draws a horizontal dotted line at the specified point on y-axis}
 
 \item{ylm}{Limits of the Y-axis}
 }
