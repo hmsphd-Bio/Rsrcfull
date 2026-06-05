@@ -101,9 +101,9 @@ cqbrt <- function(x) {
 #' @param xlab Label of the X-axis
 #' @param h_line_at Draws a horizontal dotted line at the specified point on y-axis
 #' @export
-plotline <- function(x,title = NULL,color="red",xlim=NULL,ylim=NULL,ylab =NULL,xlab =NULL, h_line_at = NULL) {
+plotline <- function(x,title = NULL,color="red",xlim=NULL,ylim=NULL,ylab =NULL,xlab =NULL, h_line_at = NULL,v_line_at = NULL) {
   if (is.vector(x) && is.numeric(x)){
-  plot_args = list(x = as.numeric(x),type = "l",col = as.character(color))
+  plot_args = list(x = as.numeric(x),type = "l",col = as.character(color),lwd=1.5)
 
   label = deparse(substitute(x))
 
@@ -121,6 +121,7 @@ plotline <- function(x,title = NULL,color="red",xlim=NULL,ylim=NULL,ylab =NULL,x
   do.call(plot,plot_args)
 
   if (!is.null(h_line_at)) abline(h=h_line_at,lty= 2,col="gray")
+  if (!is.null(v_line_at)) abline(v=v_line_at,lty=2,col= "gray")
 
       } else stop("x must be a numeric vector.\n")
 
