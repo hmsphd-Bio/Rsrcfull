@@ -73,7 +73,7 @@ multiplots <- function(rows,columns) {
   if (!is.numeric(rows) || !is.numeric(columns)) stop("Both 'rows' and 'columns' must be numeric!")
 
   invisible(par(mfrow =c(rows,columns)))
-  cat("Plots layout changed!.You can now plot",rows*columns,"plots in a single window.")
+  cat("Plots layout changed!.You can now plot",rows*columns,"plots in a single window.\n")
 }
 ###------------------------------------------------------------------------------
 
@@ -88,4 +88,40 @@ cqbrt <- function(x) {
   }
   cube_root <- round(x^(1/3),2)
   return(cube_root)
+}
+
+#------------------------------------------------
+#' Make a line plot using base R graphics.
+#'
+#' @param x a numeric vector
+#' @param title Title of the plot
+#' @param xlim limits of the X-axis
+#' @param ylm Limits of the Y-axis
+#' @param ylab Label of the Y-axis
+#' @param xlab Label of the X-axis
+#' @param line_at_zero Draws a horizontal dotted line at the zero
+#' @export
+plotline <- function(x,title = NULL,color="red",xlim=NULL,ylim=NULL,ylab =NULL,xlab =NULL, h_line_at = NULL) {
+  if (is.vector(x) && is.numeric(x)){
+  plot_args = list(x = as.numeric(x),type = "l",col = as.character(color))
+
+  label = deparse(substitute(x))
+
+    if (!is.null(title)) plot_args$main <- title
+
+    if (!is.null(xlim)) plot_args$xlim <- xlim
+    if (!is.null(ylim)) plot_args$ylim <- ylim
+
+    plot_args$xlab <-  if (!is.null(xlab))  xlab else ""
+    plot_args$ylab <-  if (!is.null(ylab))  ylab else label
+
+
+
+
+  do.call(plot,plot_args)
+
+  if (!is.null(h_line_at)) abline(h=h_line_at,lty= 2,col="gray")
+
+      } else stop("x must be a numeric vector.\n")
+
 }
