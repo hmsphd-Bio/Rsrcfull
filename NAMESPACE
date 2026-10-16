@@ -2,6 +2,10 @@
 
 export(countNA)
 export(cqbrt)
+export(deg2rad)
+export(geometric_mean)
+export(harmonic_mean)
 export(ht)
 export(multiplots)
 export(plotline)
+export(rad2deg)
