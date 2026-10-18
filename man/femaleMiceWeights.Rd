@@ -6,8 +6,10 @@
 \title{Bodyweights of Female Mice, fed on high fat (hf) vs control (chow) diet.}
 \format{
 A dataframe with 24 rows and 2 variables:
-diet- either high fat diet or chow diet the female mice were fed.
-bodyweight- bodyweights of female mice in grams.
+\describe{
+	\item{diet}{either high fat diet or chow diet the female mice were fed.}
+	\item{bodyweight}{bodyweights of female mice in grams.}
+}
 }
 \usage{
 femaleMiceWeights
