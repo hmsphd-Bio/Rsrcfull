@@ -1,3 +1,20 @@
+#' Pearson's dataset of Heights of fathers and their sons, that he used to describe regression.
+#'
+#' A classic dataset containing 1,078 measurements of a father's height 
+#' and his adult son's height, collected by Karl Pearson.
+#'
+#' @format A data frame with 1078 observations on 2 variables:
+#' \describe{
+#'   \item{fheight}{Father's height in inches.}
+#'   \item{sheight}{Son's height in inches.}
+#' }
+#' @source Pearson, K. and Lee, A. (1903). On the laws of inheritance in man. 
+#'   \emph{Biometrika}, 2(4), 357-462.
+"father.son"
+
+
+
+
 #' Bodyweights of Female Mice, fed on high fat (hf) vs control (chow) diet.
 #'
 #' This dataset contains bodyweights of female mice that were fed a high fat diet (hf-12 female mice) and their control (chow-12 female mice), fed on a normal/chow diet.
@@ -9,9 +26,9 @@
 #' 	\item{diet}{either high fat diet or chow diet the female mice were fed.}
 #' 	\item{bodyweight}{bodyweights of female mice in grams.}
 #'}
+#' @source Irizarry, R.A., & Love, M.I. (2016). Data Analysis for the Life Sciences with R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/9781315367002
+#' @source https://github.com/genomicsclass/dagdata/tree/master/inst/extdata
 "femaleMiceWeights"
-
-
 
 
 
@@ -28,4 +45,6 @@
 #'
 #' @format A double numeric vector with 225 rows
 #' @source Jackson laboratory
+#' @source https://github.com/genomicsclass/dagdata/tree/master/inst/extdata
+#' @source Irizarry, R.A., & Love, M.I. (2016). Data Analysis for the Life Sciences with R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/9781315367002
 "femaleControlsPopulation"

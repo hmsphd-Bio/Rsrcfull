@@ -9,6 +9,10 @@ A double numeric vector with 225 rows
 }
 \source{
 Jackson laboratory
+
+https://github.com/genomicsclass/dagdata/tree/master/inst/extdata
+
+Irizarry, R.A., & Love, M.I. (2016). Data Analysis for the Life Sciences with R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/9781315367002
 }
 \usage{
 femaleControlsPopulation

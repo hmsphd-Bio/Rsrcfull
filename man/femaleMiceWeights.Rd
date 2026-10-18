@@ -11,6 +11,11 @@ A dataframe with 24 rows and 2 variables:
 	\item{bodyweight}{bodyweights of female mice in grams.}
 }
 }
+\source{
+Irizarry, R.A., & Love, M.I. (2016). Data Analysis for the Life Sciences with R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/9781315367002
+
+https://github.com/genomicsclass/dagdata/tree/master/inst/extdata
+}
 \usage{
 femaleMiceWeights
 }
