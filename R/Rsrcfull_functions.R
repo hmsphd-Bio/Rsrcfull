@@ -241,3 +241,44 @@ harmonic_mean <- function(x, na.rm = FALSE) {
 
   return(h_mean)
 }
+
+
+
+
+#---------------------------------------------------------------------
+#' Find the Statistical Mode(s) of a Vector
+#'
+#' This function calculates all statistical modes of a vector, handling 
+#' multimodal datasets and automatically removing missing values.
+#'
+#' @param x A vector (numeric, integer, character, factor, etc.).
+#' @return A list containing two elements: 
+#'   \item{Mode(s)}{The most frequent value(s) in the data.}
+#'   \item{frequency}{The count of how many times the mode(s) appeared.}
+#' @export
+#' @examples
+#' data_bimodal <- c(1, 2, 2, 3, 4, 5, 5, 6)
+#' Modes(data_bimodal)
+Modes <- function(x) {
+  # Remove missing values
+  x <- na.omit(x)
+  
+  # Calculate frequencies
+  freq_table <- table(x)
+  
+  # Find the maximum frequency
+  max_freq <- max(freq_table)
+  
+  # Find all values that match the maximum frequency
+  modes <- names(freq_table[freq_table == max_freq])
+  
+  # Convert back to the original data type (numeric, integer, etc.) if needed
+  mode_type <- class(x)
+  if (mode_type == "numeric") {
+    modes <- as.numeric(modes)
+  } else if (mode_type == "integer") {
+    modes <- as.integer(modes)
+  }
+  
+  return(list( Modes = modes, frequency = max_freq))
+}
