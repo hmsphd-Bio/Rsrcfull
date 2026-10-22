@@ -282,3 +282,35 @@ Modes <- function(x) {
   
   return(list( Modes = modes, frequency = max_freq))
 }
+
+
+
+
+
+#' Shuffle Elements or Rows
+#'
+#' @param x A vector, matrix, or data frame to shuffle.
+#' @param ... Additional arguments passed to methods.
+#' @export
+shuffle <- function(x, ...) {
+  UseMethod("shuffle")
+}
+
+#' @export
+shuffle.default <- function(x, ...) {
+  if (is.null(x)) return(NULL)
+  sample(x, size = length(x), replace = FALSE)
+}
+
+#' @export
+shuffle.matrix <- function(x, ...) {
+  # Shuffles rows while keeping columns intact
+  x[sample(nrow(x), size = nrow(x), replace = FALSE), , drop = FALSE]
+}
+
+#' @export
+shuffle.data.frame <- function(x, ...) {
+  # Shuffles rows while preserving data frame attributes and columns
+  x[sample(nrow(x), size = nrow(x), replace = FALSE), , drop = FALSE]
+}
+
