@@ -287,6 +287,9 @@ Modes <- function(x) {
 
 
 
+
+
+
 #' Shuffle Elements or Rows
 #'
 #' @param x A vector, matrix, or data frame to shuffle.
@@ -312,5 +315,32 @@ shuffle.matrix <- function(x, ...) {
 shuffle.data.frame <- function(x, ...) {
   # Shuffles rows while preserving data frame attributes and columns
   x[sample(nrow(x), size = nrow(x), replace = FALSE), , drop = FALSE]
+}
+
+
+
+
+
+
+
+
+
+
+
+#' Generate random draws from a Dirichlet distribution
+#' 
+#' @param n Number of random vectors to generate.
+#' @param alpha Numeric vector of shape parameters.
+#' @return A matrix where each row is a random vector summing to 1.
+#' @export 
+rdirichlet <- function(n, alpha) {
+  k <- length(alpha)
+  
+  # Step 1: Draw independent gamma variables for each alpha parameter
+  # rep(alpha, each = n) repeats each alpha n times to match the total draws needed
+  gammas <- matrix(rgamma(n * k, shape = rep(alpha, each = n)), nrow = n)
+  
+  # Step 2: Divide each row by its sum so the proportions sum to 1
+  return(gammas / rowSums(gammas))
 }
 
