@@ -48,3 +48,35 @@
 #' @source https://github.com/genomicsclass/dagdata/tree/master/inst/extdata
 #' @source Irizarry, R.A., & Love, M.I. (2016). Data Analysis for the Life Sciences with R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/9781315367002
 "femaleControlsPopulation"
+
+
+
+
+
+
+#' Original dataset of miceweights fed on high fat or control(chow diet)-as a part of the diabetes study. 'femaleControlsPopulation' and 'femaleMiceWeights' are the subset of this larger dataset.
+#'
+#' This dataset is a part of a list of datasets, curated by Rafael Irizarry, for his book 'Data Analysis for Life Sciences' and the corresponding course at HarvardX.
+#'
+#'
+#'
+#'Rafael uses this dataset as an entire population of mice to calculate Population summary statistics(Population mean, Population SD,etc.). The subsets 'femaleControlsPopulaton' and 'femaleMiceWeights' are the subsets of this data set, which are treated as samples.
+#'
+#' @format A dataframe containing 846 rows and 3 variables:
+#' \describe{
+#'	\item{sex}{sex of the mice}
+#' 	\item{diet}{either high fat diet or chow diet the female mice were fed.}
+#' 	\item{bodyweight}{bodyweights of female mice in grams.}
+#'}
+#' 
+#' @source mice_pheno.csv are from all current diversity outbred (DO) mice
+#' data provided by Karen Svenson <Karen.Svenson@jax.org> via
+#' Gary Churchill <Gary.Churchill@jax.org>
+#' Dan Gatti <Dan.Gatti@jax.org>
+#' @source Jackson laboratory
+#' @source https://github.com/genomicsclass/dagdata/tree/master/inst/extdata
+#' @source Irizarry, R.A., & Love, M.I. (2016). Data Analysis for the Life Sciences with R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/9781315367002
+"micepheno"
+
+
+
